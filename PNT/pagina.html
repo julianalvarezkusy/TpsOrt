@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <table class="table table-striped">
+            <tr>
+                <th><label>Número 1: </label><input type="number" id="input1"></input></th>
+                <th><input type="text" id="operacion"></input></th>
+                <th><label>Número 2: </label><input type="number" id="input2"></input></th>
+                <th>=</th>
+                <th><label>Resultado: </label><input type="number" id="input3"></input></th>
+            </tr>
+            <tr><th><button type="button" class="btn btn-primary" id="calc" onclick="calcular(1)">Sumar</button></th></tr>
+                <tr><th><button type="button" class="btn btn-primary" onclick="calcular(2)">Restar</button></th></tr>
+                <tr><th><button type="button" class="btn btn-primary" onclick="calcular(3)">Multiplicar</button></th></tr>
+                <tr><th><button type="button" class="btn btn-primary" onclick="calcular(4)">Dividir</button></th></tr>
+
+
+        </table>
+
+
+
+    </body>
+    <script>
+        function calcular(num){
+
+            if (num == 1) {
+                var number1 = Number(document.getElementById("input1").value);
+
+                var number2 = Number(document.getElementById("input2").value);
+
+
+                var number3 = number1 + number2;
+
+                document.getElementById("input3").value = number3;
+                document.getElementById("operacion").value = "+";
+
+
+            }
+
+            if (num == 2) {
+                var number1 = Number(document.getElementById("input1").value);
+
+                var number2 = Number(document.getElementById("input2").value);
+
+
+                var number3 = number1 - number2;
+
+                document.getElementById("input3").value = number3;
+                document.getElementById("operacion").value = "-";
+
+            }
+
+            if (num == 3) {
+                var number1 = Number(document.getElementById("input1").value);
+
+                var number2 = Number(document.getElementById("input2").value);
+
+
+                var number3 = number1 * number2;
+
+                document.getElementById("input3").value = number3;
+                document.getElementById("operacion").value = "*";
+
+            }
+
+            if (num == 4) {
+                var number1 = Number(document.getElementById("input1").value);
+
+                var number2 = Number(document.getElementById("input2").value);
+
+                if(number2 == 0){
+                    alert("No se puede dividir por cero");
+                }else{
+                var number3 = number1 / number2;
+                }
+
+                document.getElementById("input3").value = number3;
+                document.getElementById("operacion").value = "/";
+
+            }
+
+
+        }
+
+
+    </script>
+
+</html>
